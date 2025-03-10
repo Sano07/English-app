@@ -2,5 +2,6 @@
     <string name="app_name" translatable="false">English-app</string>
     <string name="button_skip">Skip</string>
     <string name="correct_answer">Correct!</string>
+    <string name="wrong_answer">Wrong!</string>
     <string name="button_continue">Continue</string>
 </resources>
