@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/ib_CloseButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -26,15 +26,17 @@
         android:layout_marginHorizontal="33dp"
         android:layout_marginTop="86dp"
         android:text="Galaxy"
+        android:singleLine="true"
         android:textSize="50sp"
         android:fontFamily="@font/nunito_bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton"
+        app:layout_constraintTop_toBottomOf="@+id/ib_CloseButton"
         tools:text="Galaxy"
         tools:ignore="HardcodedText" />
 
     <LinearLayout
+        android:id="@+id/layoutVariants"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="33dp"
@@ -71,13 +73,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 style="@style/TextViewVariantsStyle"
-                android:text="Cломать"
                 tools:ignore="HardcodedText" />
 
 
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/layoutAnswer2"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_marginTop="18dp"
@@ -87,6 +89,7 @@
 
 
             <TextView
+                android:id="@+id/tvVariantNumber2"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginStart="12dp"
@@ -98,11 +101,11 @@
 
 
             <TextView
+                android:id="@+id/tvVariantValue2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 style="@style/TextViewVariantsStyle"
-                android:text="Cон"
                 tools:ignore="HardcodedText" />
 
 
@@ -136,13 +139,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 style="@style/TextViewVariantsStyle"
-                android:text="Галактика"
                 tools:ignore="HardcodedText" />
 
 
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/layoutAnswer4"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_marginTop="18dp"
@@ -152,6 +155,7 @@
 
 
             <TextView
+                android:id="@+id/tvVariantNumber4"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginStart="12dp"
@@ -163,12 +167,12 @@
 
 
             <TextView
+                android:id="@+id/tvVariantValue4"
+                style="@style/TextViewVariantsStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                style="@style/TextViewVariantsStyle"
-                android:text="Утюг"
-                tools:ignore="HardcodedText" />
+                tools:ignore="HardcodedText"/>
 
 
         </LinearLayout>
