@@ -1,6 +1,7 @@
 package com.example.english_app
 
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.activity.ComponentActivity
@@ -16,19 +17,22 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
-import com.example.english_app.databinding.ActyvityLearnWordBinding
+import com.bumptech.glide.Glide
+import com.example.english_app.databinding.ActivityLearnWordBinding
 import com.example.english_app.ui.theme.EnglishappTheme
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.*
 
 class MainActivity : AppCompatActivity() {
 
-    private var _binding: ActyvityLearnWordBinding? = null
+    private var _binding: ActivityLearnWordBinding? = null
     private val binding
         get() = _binding
-            ?: throw IllegalStateException("Binding for ActyvityLearnWordBinding must not be null")
+            ?: throw IllegalStateException("Binding for ActivityLearnWordBinding must not be null")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        _binding = ActyvityLearnWordBinding.inflate(layoutInflater)
+        _binding = ActivityLearnWordBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val trainer = LearnWordsTrainer()
@@ -48,7 +52,6 @@ class MainActivity : AppCompatActivity() {
                 showNextQuestion(trainer)
             }
         }
-
     }
 
     private fun showNextQuestion(trainer: LearnWordsTrainer) {
