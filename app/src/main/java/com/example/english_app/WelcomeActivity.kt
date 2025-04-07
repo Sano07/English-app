@@ -17,7 +17,7 @@ class WelcomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_welcome)
 
         lifecycleScope.launch {
-            delay(30000)
+            delay(10000)
             startActivity(Intent(this@WelcomeActivity, MainActivity::class.java))
             finish()
         }

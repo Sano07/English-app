@@ -1,6 +1,7 @@
 package com.example.english_app
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -25,6 +26,7 @@ import kotlinx.coroutines.*
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var trainer: LearnWordsTrainer
     private var _binding: ActivityLearnWordBinding? = null
     private val binding
         get() = _binding
@@ -35,7 +37,7 @@ class MainActivity : AppCompatActivity() {
         _binding = ActivityLearnWordBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val trainer = LearnWordsTrainer()
+        trainer = LearnWordsTrainer()
         showNextQuestion(trainer)
 
         with(binding) {
@@ -52,6 +54,7 @@ class MainActivity : AppCompatActivity() {
                 showNextQuestion(trainer)
             }
         }
+
     }
 
     private fun showNextQuestion(trainer: LearnWordsTrainer) {
@@ -230,6 +233,16 @@ class MainActivity : AppCompatActivity() {
             tvResultMassage.text = messageText
             ivResultIcon.setImageResource(resultIconResource)
         }
+
+        val totalWords = trainer.getTotalWords()
+        val learnedWords = trainer.getLearnedWordsCount()
+
+        val progressPercent = (learnedWords.toFloat() / totalWords * 100).toInt()
+        binding.progressBar.progress = progressPercent
+
+        Log.d("ProgressDebug", "Total: $totalWords, Learned: $learnedWords")
+        Log.d("ProgressDebug", "ProgressPercent: $progressPercent")
     }
 }
+
 
