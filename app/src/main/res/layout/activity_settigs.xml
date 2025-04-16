@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettigsActivity">
+
+    <TextView
+        android:id="@+id/tvQuestionSettings"
+        android:layout_width="305dp"
+        android:layout_height="101dp"
+        android:background="@drawable/shape_select_lvl_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="110dp"
+        android:layout_marginStart="50dp"
+        android:text="Select lvl"
+        android:textAllCaps="true"
+        android:textSize="45sp"
+        android:textColor="@color/white"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/nunito_bold"
+        android:gravity="center"
+        tools:ignore="HardcodedText">
+    </TextView>
+
+    <LinearLayout
+        android:id="@+id/layoutLvlVariants"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvQuestionSettings">
+
+
+        <TextView
+            android:id="@+id/tvBeginnerLvl"
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:background="@drawable/shape_rounded_select_lvl_variants"
+            app:layout_constraintTop_toBottomOf="@+id/tvQuestionSettings"
+            android:text="BEGINNER"
+            android:textColor="@color/black"
+            android:textSize="35sp"
+            style="@style/TextViewVariantsStyle"
+            android:gravity="center"
+            tools:ignore="HardcodedText">
+        </TextView>
+
+        <TextView
+            android:id="@+id/tvIntermediateLvl"
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_rounded_select_lvl_variants"
+            app:layout_constraintTop_toBottomOf="@+id/tvQuestionSettings"
+            android:text="INTERMEDIATE"
+            android:textColor="@color/black"
+            android:textSize="35sp"
+            style="@style/TextViewVariantsStyle"
+            android:gravity="center"
+            tools:ignore="HardcodedText">
+        </TextView>
+
+        <TextView
+            android:id="@+id/tvAdvancedLvl"
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_rounded_select_lvl_variants"
+            app:layout_constraintTop_toBottomOf="@+id/tvQuestionSettings"
+            android:text="ADVANCED"
+            android:textColor="@color/black"
+            android:textSize="35sp"
+            style="@style/TextViewVariantsStyle"
+            android:gravity="center"
+            tools:ignore="HardcodedText">
+        </TextView>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnConfirm"
+        android:layout_width="300dp"
+        android:layout_height="58dp"
+        android:backgroundTint="#2574FF"
+        android:text="@string/button_confirm"
+        android:textAllCaps="true"
+        android:layout_marginBottom="24dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+    </Button>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
