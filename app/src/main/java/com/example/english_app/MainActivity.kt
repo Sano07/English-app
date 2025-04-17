@@ -1,5 +1,6 @@
 package com.example.english_app
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.ImageView
@@ -52,6 +53,11 @@ class MainActivity : AppCompatActivity() {
 
             btnSkip.setOnClickListener {
                 showNextQuestion(trainer)
+            }
+
+            ibCloseButton.setOnClickListener {
+                val intent = Intent(this@MainActivity, SelectDictionaryActivity::class.java)
+                startActivity(intent)
             }
         }
 

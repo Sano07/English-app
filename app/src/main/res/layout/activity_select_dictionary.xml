@@ -7,6 +7,18 @@
     android:layout_height="match_parent"
     tools:context=".SelectDictionaryActivity">
 
+    <ImageButton
+        android:id="@+id/ibCloseButtonSelectDictionary"
+        android:layout_width="46dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Close batton"
+        android:src="@drawable/ic_close"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/tvQuestionSettings"
         android:layout_width="305dp"
@@ -26,12 +38,25 @@
         tools:ignore="HardcodedText">
     </TextView>
 
+
+    <TextView
+        android:id="@+id/LVL"
+        android:layout_width="142dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="10dp"
+        android:text="dsfdsf"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvQuestionSettings"
+        tools:ignore="MissingConstraints">
+    </TextView>
+
     <LinearLayout
         android:id="@+id/layoutLvlVariants"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="50dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="80dp"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
         android:orientation="vertical"

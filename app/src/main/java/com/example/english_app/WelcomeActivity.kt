@@ -18,7 +18,7 @@ class WelcomeActivity : AppCompatActivity() {
 
         lifecycleScope.launch {
             delay(10000)
-            startActivity(Intent(this@WelcomeActivity, MainActivity::class.java))
+            startActivity(Intent(this@WelcomeActivity, SettigsActivity::class.java))
             finish()
         }
 
