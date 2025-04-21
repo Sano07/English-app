@@ -11,20 +11,19 @@
         android:id="@+id/tvQuestionSettings"
         android:layout_width="305dp"
         android:layout_height="101dp"
-        android:background="@drawable/shape_select_lvl_tv"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="110dp"
-        android:layout_marginStart="50dp"
-        android:text="Select lvl"
-        android:textAllCaps="true"
-        android:textSize="45sp"
-        android:textColor="@color/white"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="110dp"
+        android:background="@drawable/shape_select_lvl_tv"
         android:fontFamily="@font/nunito_bold"
         android:gravity="center"
-        tools:ignore="HardcodedText">
-    </TextView>
+        android:text="Select lvl"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="45sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText"></TextView>
 
     <LinearLayout
         android:id="@+id/layoutLvlVariants"
@@ -33,53 +32,51 @@
         android:layout_marginHorizontal="50dp"
         android:layout_marginTop="100dp"
         android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvQuestionSettings">
 
 
         <TextView
             android:id="@+id/tvBeginnerLvl"
-            android:layout_width="300dp"
+            style="@style/TextViewVariantsStyle"
+            android:layout_width="match_parent"
             android:layout_height="100dp"
             android:background="@drawable/shape_rounded_select_lvl_variants"
-            app:layout_constraintTop_toBottomOf="@+id/tvQuestionSettings"
+            android:gravity="center"
             android:text="BEGINNER"
             android:textColor="@color/black"
             android:textSize="35sp"
-            style="@style/TextViewVariantsStyle"
-            android:gravity="center"
-            tools:ignore="HardcodedText">
-        </TextView>
+            app:layout_constraintTop_toBottomOf="@+id/tvQuestionSettings"
+            tools:ignore="HardcodedText"></TextView>
 
         <TextView
             android:id="@+id/tvIntermediateLvl"
-            android:layout_width="300dp"
+            style="@style/TextViewVariantsStyle"
+            android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/shape_rounded_select_lvl_variants"
-            app:layout_constraintTop_toBottomOf="@+id/tvQuestionSettings"
+            android:gravity="center"
             android:text="INTERMEDIATE"
             android:textColor="@color/black"
             android:textSize="35sp"
-            style="@style/TextViewVariantsStyle"
-            android:gravity="center"
-            tools:ignore="HardcodedText">
-        </TextView>
+            app:layout_constraintTop_toBottomOf="@+id/tvQuestionSettings"
+            tools:ignore="HardcodedText"></TextView>
 
         <TextView
             android:id="@+id/tvAdvancedLvl"
-            android:layout_width="300dp"
+            style="@style/TextViewVariantsStyle"
+            android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/shape_rounded_select_lvl_variants"
-            app:layout_constraintTop_toBottomOf="@+id/tvQuestionSettings"
+            android:gravity="center"
             android:text="ADVANCED"
             android:textColor="@color/black"
             android:textSize="35sp"
-            style="@style/TextViewVariantsStyle"
-            android:gravity="center"
-            tools:ignore="HardcodedText">
-        </TextView>
+            app:layout_constraintTop_toBottomOf="@+id/tvQuestionSettings"
+            tools:ignore="HardcodedText"></TextView>
 
     </LinearLayout>
 

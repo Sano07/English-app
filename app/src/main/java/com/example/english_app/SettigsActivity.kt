@@ -27,7 +27,7 @@ class SettigsActivity : AppCompatActivity() {
             tvBeginnerLvl.setOnClickListener{
                 btnConfirm.isVisible = true
                 selectLvl(tvBeginnerLvl)
-                selectedLvl = "beginner"
+                selectedLvl = "Beginner"
             }
 
             tvIntermediateLvl.setOnClickListener{

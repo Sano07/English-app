@@ -10,5 +10,7 @@
     <color name="textVariantsColor">#888992</color>
     <color name="correctAnswerColor">#56F61E</color>
     <color name="wrongAnswerColor">#FF0000</color>
-
+    <color name="Beginner">#6ECE4F</color>
+    <color name="Intermediate">#D5C431</color>
+    <color name="Advanced">#E71220</color>
 </resources>
