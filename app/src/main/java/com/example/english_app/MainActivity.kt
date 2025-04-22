@@ -25,7 +25,7 @@ import com.example.english_app.ui.theme.EnglishappTheme
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.*
 
-class MainActivity : AppCompatActivity() {
+open class MainActivity : AppCompatActivity() {
 
     private lateinit var trainer: LearnWordsTrainer
     private var _binding: ActivityLearnWordBinding? = null
@@ -38,8 +38,15 @@ class MainActivity : AppCompatActivity() {
         _binding = ActivityLearnWordBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        trainer = LearnWordsTrainer()
+        val selectedDictionaries = intent.getStringArrayListExtra("EXTRA_DICTIONARY_LIST")
+        val selectedLvl = intent.getStringExtra("EXTRA_SELECTED_LVL").toString()
+
+        trainer = LearnWordsTrainer(selectedLvl, selectedDictionaries)
         showNextQuestion(trainer)
+
+        //Log.d("MyDebug", "selectedLvl = $selectedLvl")
+        //Log.d("MyDebug", "selectedDictionary = $selectedDictionary")
+
 
         with(binding) {
             btnContinue.setOnClickListener {
@@ -246,8 +253,8 @@ class MainActivity : AppCompatActivity() {
         val progressPercent = (learnedWords.toFloat() / totalWords * 100).toInt()
         binding.progressBar.progress = progressPercent
 
-        Log.d("ProgressDebug", "Total: $totalWords, Learned: $learnedWords")
-        Log.d("ProgressDebug", "ProgressPercent: $progressPercent")
+        //Log.d("ProgressDebug", "Total: $totalWords, Learned: $learnedWords")
+        //Log.d("ProgressDebug", "ProgressPercent: $progressPercent")
     }
 }
 

@@ -10,6 +10,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.english_app.databinding.ActivitySelectDictionaryBinding
 import com.example.english_app.databinding.ActivitySettingsBinding
+import java.util.ArrayList
 
 class SelectDictionaryActivity : AppCompatActivity() {
 
@@ -28,6 +29,15 @@ class SelectDictionaryActivity : AppCompatActivity() {
             ibCloseButtonSelectDictionary.setOnClickListener {
                 val intent = Intent(this@SelectDictionaryActivity, SettigsActivity::class.java)
                 startActivity(intent)
+            }
+
+            btnConfirm.setOnClickListener {
+                selectedDictionary.let { dictionaryList ->
+                    val intent = Intent(this@SelectDictionaryActivity, MainActivity::class.java)
+                    intent.putStringArrayListExtra("EXTRA_DICTIONARY_LIST", ArrayList(dictionaryList) )
+                    intent.putExtra("EXTRA_SELECTED_LVL", selectedLvl)
+                    startActivity(intent)
+                }
             }
 
             LVL.text = selectedLvl
