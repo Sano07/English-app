@@ -1,5 +1,5 @@
 [versions]
-agp = "8.8.0"
+agp = "8.13.2"
 appcompatVersion = "1.6.1"
 glide = "4.16.0"
 jacksonModuleKotlin = "2.15.0"

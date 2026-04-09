@@ -2,28 +2,12 @@ package com.example.english_app
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
-import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
-import com.bumptech.glide.Glide
 import com.example.english_app.databinding.ActivityLearnWordBinding
-import com.example.english_app.ui.theme.EnglishappTheme
-import androidx.lifecycle.lifecycleScope
-import kotlinx.coroutines.*
 
 open class MainActivity : AppCompatActivity() {
 
